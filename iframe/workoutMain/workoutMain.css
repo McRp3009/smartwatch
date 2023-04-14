@@ -9,7 +9,7 @@
     border-radius: 232.2px 232.2px 0 0;
     transform:translate(0%, -50%);
     background-color: #212121;
-    border: 0.5px solid red;
+    border-bottom: 0.5px solid red;
   }
   
   #bottom {
@@ -23,7 +23,7 @@
     border-radius: 0 0 232.2px 232.2px;
     transform:translate(0%, 50%);
     background-color: #212121;
-    border: 0.5px solid red;
+    border-top: 0.5px solid red;
   }
   
   #startWorkout {
@@ -75,20 +75,26 @@
     position: absolute;
     height: 232.2px;
     width: 232.2px;
-    background-color: red;
+    background-color: #212121;
     /* display:none; */
     border-radius: 50%;
     padding-block-start: 0px;
+    z-index: 99;
   }
 
   #return {
     width: 10px;
-    height: 20px;
-    z-index: 100;
-    position: left;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: red;
+    height: 60px;
+    z-index: 0;
+    left: -240px;
+    margin-right: 222.2px;
+    background-color: whitesmoke;
+    border-radius: 50%;
+  }
+
+  #arrow-left {
+    color: black;
+    font-size: 10px;
+    margin-top: 24px;
+    cursor: pointer;
   }
