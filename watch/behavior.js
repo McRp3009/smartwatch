@@ -1,0 +1,1 @@
+sessionStorage.setItem("calories_lost", 0);

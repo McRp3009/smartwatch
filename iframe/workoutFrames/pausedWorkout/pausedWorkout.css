@@ -9,7 +9,10 @@
     border-radius: 232.2px 232.2px 0 0;
     transform:translate(0%, -50%);
     background-color: #212121;
-    border-bottom: 0.5px solid red;
+    border-top: 1px solid #00A2E8;
+    border-right: 1px solid #00A2E8;
+    border-left: 1px solid #00A2E8;
+    border-bottom: 0.75px solid #00A2E8;
 
   }
   
@@ -24,7 +27,10 @@
     border-radius: 0 0 232.2px 232.2px;
     transform:translate(0%, 50%);
     background-color: #212121;
-    border-top: 0.5px solid red;
+    border-bottom: 1px solid #00A2E8;
+    border-right: 1px solid #00A2E8;
+    border-left: 1px solid #00A2E8;
+    border-top: 0.75px solid #00A2E8;
   }
 
   #finish-text, #resume-text {

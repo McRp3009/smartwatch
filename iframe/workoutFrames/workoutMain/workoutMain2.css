@@ -10,8 +10,12 @@
     transform:translate(0%, -50%);
     transform:rotate(-90deg);
     background-color: #212121;
-    border-bottom: 0.5px solid red;
+    border-bottom: 0.5px solid #00A2E8;
     left: -58px;
+    border-top: 1px solid #00A2E8;
+    border-right: 1px solid #00A2E8;
+    border-left: 1px solid #00A2E8;
+    border-bottom: 0.75px solid #00A2E8;
     
   }
   
@@ -27,8 +31,12 @@
     transform:translate(0%, 50%);
     transform:rotate(-90deg);
     background-color: #212121;
-    border-top: 0.5px solid red;
+    border-top: 0.5px solid #00A2E8;
     right: -58px;
+    border-top: 1px solid #00A2E8;
+    border-right: 1px solid #00A2E8;
+    border-left: 1px solid #00A2E8;
+    border-bottom: 0.75px solid #00A2E8;
   }
   
   #startWorkout {
@@ -105,7 +113,7 @@
     height: 60px;
     position: relative;
     border-radius: 50%;
-    border: 0.5px solid red;
+    border: 0.5px solid #00A2E8;
     top: 70px;
     background-color: #212121;
   }
