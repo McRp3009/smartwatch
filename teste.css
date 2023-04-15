@@ -1,12 +1,9 @@
 body {
   background: grey;
-  width: 240px;
-  height: 100%;
 }
 
 .watch {
-  z-index: 100;
-  width: 240px;
+  width: 260px;
   display: inline-block;
   position: relative ;
 }
@@ -17,15 +14,14 @@ body {
   border-radius: 50%;
   border: 8px solid #454545;
   position: relative;
-  z-index: 100;
+  z-index: 99;
   box-shadow: 0 0 6px #555;
   
 }
 
 .watch_display {
     position: relative;
-    z-index: 100;
-
+    z-index: 99;
     border-radius: 50%;
     height: 96.75%;
     width: 96.75%;
@@ -76,22 +72,7 @@ body {
   text-align: center;
 }
 
-iframe {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  width: 105%;
-	height: 105%;
-	border-radius: 50%;
-  border: 0px;
-  top: -8.5px;
-  left: -8.5px;
-  z-index: 100;
-}
-
-/* #start {
+#start {
   width: 100px;
   height: 35px;
   position: center;
@@ -100,9 +81,9 @@ iframe {
   justify-content: center;
   align-items: center;
   background-color: white;
-} */
+}
 
-/* .screen {
+.screen {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -114,59 +95,30 @@ iframe {
   width: 100%;
 }
 
-#top-left {
+#top {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 50%;
-  width: 50%;
+  width: 100%;
   position: absolute;
-  border-radius: 232.2px 0 0 0;
-  background-color: #212121;
-  transform:translate(-50%, -50%);
-  border: 0.5px solid red;
-}
-
-#top-right {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 50%;
-  width: 50%;
-  position: absolute;
-  border-radius: 0 232.2px 0 0;
-  background-color: #212121;
-  transform:translate(50%, -50%);
-  border: 0.5px solid red;
-}
-
-#bottom-right {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 50%;
-  width: 50%;
-  position: absolute;
-  border-radius: 0 0 232.2px 0;
+  border-radius: 232.2px 232.2px 0 0;
   transform:translate(0%, -50%);
   background-color: #212121;
-  transform:translate(50%, 50%);
   border: 0.5px solid red;
 }
 
-#bottom-left {
+#bottom {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 50%;
-  width: 50%;
+  width: 100%;
   position: absolute;
-  border-radius: 0 0 0 232.2px;
-  transform:translate(-50%, 50%);
+  border-radius: 0 0 232.2px 232.2px;
+  transform:translate(0%, 50%);
   background-color: #212121;
   border: 0.5px solid red;
 }
@@ -198,4 +150,4 @@ iframe {
   margin-bottom: 40px;
 }
 
- */
+

@@ -10,6 +10,7 @@
     transform:translate(0%, -50%);
     background-color: #212121;
     border-bottom: 0.5px solid red;
+
   }
   
   #bottom {
@@ -25,44 +26,43 @@
     background-color: #212121;
     border-top: 0.5px solid red;
   }
-  
-  #startWorkout {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+
+  #finish-text, #resume-text {
     color: white;
-    font-size: 40px;
-    text-align: center;
-    height: 100%;
-    width: 100%;
-    margin-top: 40px;
-  }
-  
-  
-  #selectWorkout {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-size: 40px;
-    text-align: center;
-    height: 100%;
-    width: 100%;
-    margin-bottom: 40px;
+    font-size: 30px;
+    position: relative;
+    cursor:pointer;
   }
 
-  #start {
-  width: 100px;
-  height: 35px;
-  position: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: white;
-}
+  #resume-text {
+    top: 30px;
+    right: 20px;
+  }
+
+  #finish-text {
+    left: 20px; 
+  }
+
+  #resume, #finish {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+  }
+
+  #resume {
+    left: 55px;
+    top: -20.5px;
+
+  }
+
+  #finish {
+    right: 50px;
+    top: -53.5px;
+
+  }
+
+  
 
 .screen {
     display: flex;
@@ -82,19 +82,5 @@
     z-index: 99;
   }
 
-  #return {
-    width: 10px;
-    height: 60px;
-    z-index: 0;
-    left: -240px;
-    margin-right: 222.2px;
-    background-color: red;
-    border-radius: 50%;
-  }
 
-  #arrow-left {
-    color: black;
-    font-size: 10px;
-    margin-top: 24px;
-    cursor: pointer;
-  }
+  
