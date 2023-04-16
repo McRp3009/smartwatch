@@ -1,23 +1,15 @@
 body {
   background: rgba(0, 255, 255, 0.598);
-  /* height: 100%;
-  width: 100%; */
+  display:flex;
+  align-items:center;
+  justify-content: center;
 }
 
-/* .text-center {
-  z-index: 100;
-  width: 275px;
-  height: 700px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative ;
-} */
 
 .watch {
   /* z-index: 100; */
-  /* width: 275px; */
-  /* height: 700px; */
+  width: 100vw;
+  height: 100vh;
   /* display: inline-block; */
   /* position: relative ; */
 }
