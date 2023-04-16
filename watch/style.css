@@ -1,20 +1,23 @@
 body {
   background: rgba(0, 255, 255, 0.598);
-  /* display:flex; */
-  /* align-items:center; */
-  /* justify-content: center; */
+  /* display:flex;
+  align-items:center;
+  justify-content: center; */
+  /* width: 100vw;
+  height: 100vh; */
+  /* display: flex; justify-content: center; align-items: center; height: 100vh; */
 }
 
 
 .watch {
-  /* z-index: 100; */
-  width: 100vw;
-  height: 100vh;
-  /* display: inline-block; */
-  position: relative ;
-  display:flex;
-  align-items:center;
-  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 300px
+  /* width: 300px; */
 }
 
 .watch_frame {
@@ -69,14 +72,12 @@ body {
 
 .top_band {
   height: 220px;
-  bottom: -210px;
-  left: 255px;
+  bottom: -25px;
 }
 
 .bottom_band {
   height: 220px;
-  top: -210px;
-  right: 255px;
+  top: -25px;
 }
 
 .text-center {
