@@ -29,7 +29,7 @@ function checkDirection() {
             if(xDiff > 0) {
                 alert("left");
             } else {
-                alert("left");
+                alert("right");
             }
         }
     } else if (Math.abs(yDiff) > swipeThreshold) {
