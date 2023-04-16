@@ -13,22 +13,43 @@ cal.addEventListener("click", () => {
 let touchstartX = 0
 let touchendX = 0
 
+let touchstartY = 0
+let touchendY = 0
+
+let swipeThreshold = 50;
+
 const screen = document.getElementById("screen");
     
 function checkDirection() {
-  if (touchendX < touchstartX){
-    prompt('swiped left!');
-  }
-  if (touchendX > touchstartX) {
-    prompt('swiped right!');
-  }
+    xDiff = touchstartX - touchendX;
+    yDiff = touchstartY - touchendY;
+
+    if (Math.abs(xDiff) > Math.abs(yDiff)) {
+        if (Math.abs(xDiff) > swipeThreshold) {
+            if(xDiff > 0) {
+                alert("left");
+            } else {
+                alert("left");
+            }
+        }
+    } else if (Math.abs(yDiff) > swipeThreshold) {
+        if(yDiff > 0) {
+            alert("up");
+        } else {
+            alert("down");
+        }
+    }
 };
 
 screen.addEventListener('touchstart', e => {
-  touchstartX = e.changedTouches[0].screenX;
+    if(e.changedTouches.length == 1) {
+        touchstartX = e.changedTouches[0].screenX;
+        touchstartY = e.changedTouches[0].screenY;
+    }
 });
 
 screen.addEventListener('touchend', e => {
   touchendX = e.changedTouches[0].screenX;
+  touchendY = e.changedTouches[0].screenY;
   checkDirection();
 });
