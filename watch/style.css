@@ -2,13 +2,21 @@ body {
   background: rgb(74, 197, 197);
   width: 90vw;
   height: 90vh;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  /* margin: auto; */
 }
 
 .watch {
-  z-index: 100;
-  width: 240px;
-  display: inline-block;
-  position: relative ;
+  /* z-index: 100;
+  width: 240px; */
+  /* display: inline-block; */
+  /* position: relative ; */
+  /* display:flex;
+  align-items: center;
+  justify-content: center; */
+  /* margin: auto; */
 }
 
 .watch_frame {

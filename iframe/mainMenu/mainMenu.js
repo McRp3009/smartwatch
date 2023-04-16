@@ -16,7 +16,7 @@ let touchendX = 0
 let touchstartY = 0
 let touchendY = 0
 
-let swipeThreshold = 50;
+let swipeThreshold = 25;
 
 const screen = document.getElementById("screen");
     
@@ -41,15 +41,33 @@ function checkDirection() {
     }
 };
 
+// screen.addEventListener('touchstart', e => {
+//     if(e.changedTouches.length === 1) {
+//         touchstartX = e.changedTouches[0].screenX;
+//         touchstartY = e.changedTouches[0].screenY;
+//     }
+// });
+
+// screen.addEventListener('touchend', e => {
+//   touchendX = e.changedTouches[0].screenX;
+//   touchendY = e.changedTouches[0].screenY;
+//   checkDirection();
+// });
 screen.addEventListener('touchstart', e => {
-    if(e.changedTouches.length == 1) {
-        touchstartX = e.changedTouches[0].screenX;
-        touchstartY = e.changedTouches[0].screenY;
+    const {touches} = e;
+    if(touches && touches.length === 1) {
+        const t = touches[0];
+        touchstartX = t.clientX;
+        touchstartY = t.clientY;
     }
 });
 
 screen.addEventListener('touchend', e => {
-  touchendX = e.changedTouches[0].screenX;
-  touchendY = e.changedTouches[0].screenY;
-  checkDirection();
+    const {touches} = e;
+    if(touches && touches.length === 1) {
+        const t = touches[0];
+        touchsendX = t.clientX;
+        touchsendY = t.clientY;
+        checkDirection();
+    }
 });
