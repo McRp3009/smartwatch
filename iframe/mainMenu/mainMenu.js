@@ -27,7 +27,7 @@ function checkDirection() {
     if (Math.abs(xDiff) > Math.abs(yDiff)) {
         if (Math.abs(xDiff) > swipeThreshold) {
             if(xDiff > 0) {
-                alert("left");
+                document.location.href = "../workoutFrames/workoutMain/workoutMain2.html";
             } else {
                 alert("right");
             }
