@@ -17,10 +17,10 @@ const screen = document.getElementById("screen");
     
 function checkDirection() {
   if (touchendX < touchstartX){
-    alert('swiped left!');
+    prompt('swiped left!');
   }
   if (touchendX > touchstartX) {
-    alert('swiped right!');
+    prompt('swiped right!');
   }
 };
 
