@@ -1,15 +1,3 @@
-const workout = document.getElementById("bottom-right");
-
-workout.addEventListener("click", () => {
-    document.location.href = "../workoutFrames/workoutMain/workoutMain2.html"
-});
-
-const cal = document.getElementById("bottom-left");
-
-cal.addEventListener("click", () => {
-    document.location.href = "../caloriesFrames/caloriesConnect/caloriesConnect.html"
-});
-
 let touchstartX = 0
 let touchendX = 0
 
@@ -29,14 +17,14 @@ function checkDirection() {
             if(xDiff > 0) {
                 document.location.href = "../workoutFrames/workoutMain/workoutMain2.html";
             } else {
-                alert("right");
+                //TODO heart
             }
         }
     } else if (Math.abs(yDiff) > swipeThreshold) {
         if(yDiff > 0) {
-            alert("up");
+            document.location.href = "../caloriesFrames/caloriesMain/caloriesMain.html"
         } else {
-            alert("down");
+            //TODO profile
         }
     }
 };
@@ -53,23 +41,61 @@ screen.addEventListener('touchend', e => {
   touchendY = e.changedTouches[0].screenY;
   checkDirection();
 });
-// const profile = document.getElementById("top-right");
-// profile.addEventListener('touchstart', e => {
-//     const {touches} = e;
-//     if(touches && touches.length === 1) {
-//         const t = touches[0];
-//         touchstartX = t.clientX;
-//         touchstartY = t.clientY;
-//     }
-// });
 
-// const heart = document.getElementById("top-left");
-// heart.addEventListener('touchend', e => {
-//     const {touches} = e;
-//     if(touches && touches.length === 1) {
-//         const t = touches[0];
-//         touchsendX = t.clientX;
-//         touchsendY = t.clientY;
-//         checkDirection();
-//     }
-// });
+//-------------------------------------------------------------
+
+function Time() {
+
+    // Creating object of the Date class
+    var date = new Date();
+    
+    // Get current hour
+    var hour = date.getHours();
+    // Get current minute
+    var minute = date.getMinutes();
+    // Get current second
+    var second = date.getSeconds();
+    
+    // Variable to store AM / PM
+    var period = "";
+    
+    // Assigning AM / PM according to the current hour
+    // if (hour >= 12) {
+    // period = "PM";
+    // } else {
+    // period = "AM";
+    // }
+    
+    // Converting the hour in 12-hour format
+    // if (hour == 0) {
+    // hour = 12;
+    // } else {
+    // if (hour > 12) {
+    // hour = hour - 12;
+    // }
+    // }
+    
+    // Updating hour, minute, and second
+    // if they are less than 10
+    hour = update(hour);
+    minute = update(minute);
+    second = update(second);
+    
+    // Adding time elements to the div
+    document.getElementById("digital-clock").innerText = hour + " : " + minute + " : " + second + " " + period;
+    // Set Timer to 1 sec (1000 ms)
+    setTimeout(Time, 1000);
+    }
+    
+    // Function to update time elements if they are less than 10
+    // Append 0 before time elements if they are less than 10
+    function update(t) {
+    if (t < 10) {
+    return "0" + t;
+    }
+    else {
+    return t;
+    }
+    }
+    
+    Time();

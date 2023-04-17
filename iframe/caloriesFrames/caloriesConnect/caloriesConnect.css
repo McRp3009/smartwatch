@@ -18,15 +18,14 @@
   }
 
   #connect_phone {
-   text-align: center;
+    text-align: center;
     position: relative;
-    top: 0px;
     width: 150px;
     height: 100px;
     color: white;
     border-radius: 10px;
     border: 1px solid #ff7f27;
-    top: 70px;
+    top: 45px;
     left: 45px;
   }
 
@@ -112,4 +111,25 @@
     100% {
        inset: 0;
     }
+ }
+
+ #return {
+   position: relative;
+   width: 40px;
+   height: 40px;
+   top: 10px;
+   left: 10px;
+   border-radius: 50%;
+   /* left: 100px; */
+ }
+
+ #circle {
+   width: 60px;
+   height: 60px;
+   position: relative;
+   border-radius: 50%;
+   border: 0.5px solid #ff7f27;
+   top: 60px;
+   left: 87.5px;
+   background-color: #212121;
  }
