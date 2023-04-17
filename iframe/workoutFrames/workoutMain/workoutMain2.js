@@ -22,15 +22,15 @@ right.addEventListener("click", () => {
 
 window.onload = function() {
     const start = document.getElementById("start");
-    start.innerHTML = "Run"
+    start.innerHTML = "Run";
+    sessionStorage.setItem("previous", "Run");
     let s = sessionStorage.getItem("current");
-    if(s != null) {
+    if(s !== null) {
         start.innerHTML = s;
     }
+    if(s == "Cycling") {
+        start.style.left = "-15px";
+    } else {
+        start.style.left = "5px"
+    }
 };
-
-
-document.addEventListener("swiped-right", function() {
-    prompt("yooooo");
-    document.location.href = "../mainMenu/mainMenu.html";
-});

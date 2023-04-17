@@ -1,15 +1,3 @@
-const workout = document.getElementById("bottom-right");
-
-workout.addEventListener("click", () => {
-    document.location.href = "../workoutFrames/workoutMain/workoutMain2.html"
-});
-
-const cal = document.getElementById("bottom-left");
-
-cal.addEventListener("click", () => {
-    document.location.href = "../caloriesFrames/caloriesConnect/caloriesConnect.html"
-});
-
 let touchstartX = 0
 let touchendX = 0
 
@@ -53,23 +41,3 @@ screen.addEventListener('touchend', e => {
   touchendY = e.changedTouches[0].screenY;
   checkDirection();
 });
-// const profile = document.getElementById("top-right");
-// profile.addEventListener('touchstart', e => {
-//     const {touches} = e;
-//     if(touches && touches.length === 1) {
-//         const t = touches[0];
-//         touchstartX = t.clientX;
-//         touchstartY = t.clientY;
-//     }
-// });
-
-// const heart = document.getElementById("top-left");
-// heart.addEventListener('touchend', e => {
-//     const {touches} = e;
-//     if(touches && touches.length === 1) {
-//         const t = touches[0];
-//         touchsendX = t.clientX;
-//         touchsendY = t.clientY;
-//         checkDirection();
-//     }
-// });

@@ -1,37 +1,31 @@
 #top {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 50%;
-    width: 100%;
-    position: absolute;
-    border-radius: 232.2px 232.2px 0 0;
-    transform:translate(0%, -50%);
-    background-color: #212121;
-    border-top: 1px solid #00A2E8;
-    border-right: 1px solid #00A2E8;
-    border-left: 1px solid #00A2E8;
-    border-bottom: 0.75px solid #00A2E8;
-
+  height: 118px;
+  width: 236px;
+  position: absolute;
+  left: 1px;
+  border-radius: 236px 236px 0 0;
+  background-color: #212121;
+  border-top: 1px solid #00A2E8;
+  border-right: 1px solid #00A2E8;
+  border-left: 1px solid #00A2E8;
+  border-bottom: 1px solid #00A2E8;
   }
   
   #bottom {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 50%;
-    width: 100%;
+    height: 118px;
+    width: 236px;
     position: absolute;
-    border-radius: 0 0 232.2px 232.2px;
-    transform:translate(0%, 50%);
+    border-radius: 0 0 236px 236px;
+    /* transform:rotate(180deg); */
     background-color: #212121;
-    border-bottom: 1px solid #00A2E8;
+    top: 119px;
+    left: 1px;
+    border-top: 1px solid #00A2E8;
     border-right: 1px solid #00A2E8;
     border-left: 1px solid #00A2E8;
-    border-top: 0.75px solid #00A2E8;
+    border-bottom: 1px solid #00A2E8;
   }
+
 
   #finish-text, #resume-text {
     color: white;
@@ -42,11 +36,12 @@
 
   #resume-text {
     top: 30px;
-    right: 20px;
+    right: -45px;
   }
 
   #finish-text {
-    left: 20px; 
+    top: 10px;
+    left: 100px; 
   }
 
   #resume, #finish {
@@ -57,35 +52,29 @@
   }
 
   #resume {
-    left: 55px;
+    left: 155px;
     top: -20.5px;
 
   }
 
   #finish {
-    right: 50px;
-    top: -53.5px;
+    right: -55px;
+    top: -43px;
 
   }
 
   
 
-.screen {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    /* color: white; */
+  .screen {
     font-size: 25px;
-    text-align: center;
     position: absolute;
-    height: 232.2px;
-    width: 232.2px;
-    background-color: #212121;
-    /* display:none; */
+    height: 236px;
+    width: 236px;
     border-radius: 50%;
-    padding-block-start: 0px;
-    z-index: 99;
+    top: 0px;
+    left: 0px;
+    /* background-color: red; */
+    /* border: 1px solid red; */
   }
 
 
