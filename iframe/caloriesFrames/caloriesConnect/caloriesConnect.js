@@ -41,19 +41,7 @@ function loading() {
     connect.appendChild(d);
 
     setTimeout(function() {
-        connect.innerHTML = "";
-        let p2 = document.createElement("p");
-        let p3 = document.createElement("p");
-        let p4 = document.createElement("p");
-        p2.id = "p2";
-        p3.id = "p2";
-        p4.id = "p2";
-        p2.innerText = "Take photo with";
-        p3.innerText = "your phone and";
-        p4.innerText = "submit it";
-        connect.appendChild(p2);
-        connect.appendChild(p3);
-        connect.appendChild(p4);
+        document.location.href = "../caloriesTake/caloriesTake.html";
         // connect.innerHTML = "";
         //TODO screen that says take photo with your phone
         // document.location.href = "../caloriesPhoto/caloriesPhoto.html";

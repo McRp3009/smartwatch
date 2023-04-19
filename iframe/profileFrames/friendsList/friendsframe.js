@@ -4,35 +4,35 @@ const left = document.getElementById("left");
 var index = 0;
 
 window.onload = function() {
-    if(sessionStorage.getItem("food") === null) {
-        sessionStorage.setItem("food",["Data: 11/6/22 237cal", "Data: 12/6/22 235cal", "Data: 14/6/22 241cal"]);
+    if(sessionStorage.getItem("friends") === null) {
+        sessionStorage.setItem("friends",["Jgééé", "Daniulo"]);
     }
 
-    if(sessionStorage.getItem("caloriesAdd") !== null) {
-        let s = sessionStorage.getItem("dateFood") + " " + sessionStorage.getItem("caloriesAdd");
-        addFood(s);
-        sessionStorage.removeItem("caloriesAdd");         
+    if(sessionStorage.getItem("friendAdd") !== null) {
+        let f = sessionStorage.getItem("friendAdd");
+        addFriend(f);
+        sessionStorage.removeItem("friendAdd");
     }
 };
 
-function addFood(s) {
-    let f = sessionStorage.getItem("food");
-    const food = f.split(",");
-    food.push(s);
-    sessionStorage.setItem("food", food);
+function addFriend(s) {
+    let f = sessionStorage.getItem("friends");
+    const friends = f.split(",");
+    friends.push(s);
+    sessionStorage.setItem("friends", friends);
 }
 
 right.addEventListener("click", () => {
-    let f = sessionStorage.getItem("food");
-    const food = f.split(",");
+    let f = sessionStorage.getItem("friends");
+    const friends = f.split(",");
     const curr = document.getElementById("current");
-    index = (index + 1) % food.length;
-    curr.innerText = food[index];
+    index = (index + 1) % friends.length;
+    curr.innerText = friends[index];
 
     const imagem = document.getElementById("icon");
-    let s = index + ".png"
-    if(index >= 3) {
-        s = "toAdd.png";
+    let s = friends[index] + ".png"
+    if(index > 1) {
+        s = "default.png";
     }
     imagem.src = s;
 
@@ -40,22 +40,22 @@ right.addEventListener("click", () => {
 });
 
 left.addEventListener("click", () => {
-    let f = sessionStorage.getItem("food");
-    const food = f.split(",");
+    let f = sessionStorage.getItem("friends");
+    const friends = f.split(",");
     const curr = document.getElementById("current");
     if(index === 0) {
-        index = food.length - 1;
+        index = friends.length - 1;
     } else {
         index = index-1;
     }
-    curr.innerText = food[index];
+    curr.innerText = friends[index];
 
     const imagem = document.getElementById("icon");
     let s;
     if(index >= 3) {
-        s = "toAdd.png";
+        s = "defaultFriend.png";
     } else {
-        s = index + ".png"
+        s = friends[index] + ".png"
     }
     imagem.src = s;
 
@@ -73,5 +73,5 @@ ret.addEventListener("click", () => {
 const add = document.getElementById("add");
 
 add.addEventListener("click", () => {
-    document.location.href = "../caloriesConnect/caloriesConnect.html"
+    document.location.href = "../friendsAdd/addfriendframe.html"
 });

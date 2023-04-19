@@ -53,13 +53,10 @@
   #p2 {
     width: 150px;
     position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
     text-align: center;
-    top: -15px;
-    left: -10px;
+    top: 40px;
+    left: 0px;
     color: white;
     font-size: 20px;
   }
@@ -132,4 +129,13 @@
    top: 60px;
    left: 87.5px;
    background-color: #212121;
+ }
+
+ #camera {
+  position: absolute;
+  width: 75px;
+  height: 75px;
+  top: -55px;
+  left: 37px;
+  border-radius: 50%;
  }

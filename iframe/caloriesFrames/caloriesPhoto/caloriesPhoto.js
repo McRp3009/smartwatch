@@ -1,27 +1,24 @@
-const cameraIcon = document.getElementById("camera-icon");
-const caloriesGained = document.getElementById("value1"); // seleciona o elemento span com a classe "value" dentro da div com a classe "calories-gained"
-const caloriesLost = document.getElementById("value2");        
-
-cameraIcon.addEventListener("click", function() {
-    caloriesGained.textContent = parseInt(caloriesGained.textContent) + 500;
-    sessionStorage.setItem("calories_gained", caloriesGained.textContent);
-});
-
+const data = document.getElementById("data");
 window.onload = function() {
-    caloriesGained.textContent = sessionStorage.getItem("calories_gained") == null ? 0 : sessionStorage.getItem("calories_gained");
-    if(sessionStorage.getItem("calories_lost")) {
-        let lost = sessionStorage.getItem("calories_lost");
-        caloriesLost.textContent = lost;
-        sessionStorage.setItem("calories_lost",caloriesLost.textContent);
-    }
+    const date = new Date();
+
+    let day = date.getDate();
+    let year = date.getFullYear();
+    let month = date.getMonth(); 
+    data.innerText = "Data: " + day + "/" + month + "/" + (year % 100);
 };
 
-window.addEventListener("beforeunload", function(e) {
-    sessionStorage.removeItem("{session}");
-  });
+const cancel = document.getElementById("cancel");
 
-const ret = document.getElementById("return");
+cancel.addEventListener("click", () => {
+    document.location.href = "";
+});
 
-ret.addEventListener("click", () => {
-    document.location.href = "../caloriesConnect/caloriesConnect.html"
+const next = document.getElementById("ok");
+
+next.addEventListener("click", () => {
+    console.log("next")
+    sessionStorage.setItem("dateFood", data.innerText );
+    sessionStorage.setItem("caloriesAdd", "275cal");
+    document.location.href = "../caloriesMain/caloriesMain.html";
 })

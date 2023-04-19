@@ -24,7 +24,7 @@ function checkDirection() {
         if(yDiff > 0) {
             document.location.href = "../caloriesFrames/caloriesMain/caloriesMain.html"
         } else {
-            //TODO profile
+            document.location.href = "../profileFrames/profileMain/profileframe.html"
         }
     }
 };

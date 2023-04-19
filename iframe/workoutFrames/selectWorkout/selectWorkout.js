@@ -3,31 +3,35 @@ const left = document.getElementById("left");
 
 var index = 0;
 sessionStorage.setItem("current", "Run");
-const activitiesR = ["Run", "Walk", "Cycling"];
-const activitiesL= ["Run", "Cycling", "Walk"];
+const activities = ["Run", "Walk", "Cycling"];
+// const activitiesL= ["Run", "Cycling", "Walk"];
 
 right.addEventListener("click", () => {
     const curr = document.getElementById("current");
-    index = (index + 1) % activitiesR.length;
-    curr.innerHTML = activitiesR[index];
+    index = (index + 1) % activities.length;
+    curr.innerHTML = activities[index];
 
     const imagem = document.getElementById("icon");
-    let s = activitiesR[index] + ".png"
+    let s = activities[index] + ".png"
     imagem.src = s;
 
-    sessionStorage.setItem("current", activitiesR[index]);
+    sessionStorage.setItem("current", activities[index]);
 });
 
 left.addEventListener("click", () => {
     const curr = document.getElementById("current");
-    index = (index + 1) % activitiesL.length;
-    curr.innerHTML = activitiesL[index];
+    if(index === 0) {
+        index = activities.length - 1;
+    } else {
+        index = index-1;
+    }
+    curr.innerHTML = activities[index];
 
     const imagem = document.getElementById("icon");
-    let s = activitiesL[index] + ".png"
+    let s = activities[index] + ".png"
     imagem.src = s;
 
-    sessionStorage.setItem("current", activitiesL[index]);
+    sessionStorage.setItem("current", activities[index]);
 });
 
 const options = document.getElementById("options");

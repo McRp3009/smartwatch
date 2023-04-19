@@ -17,14 +17,15 @@ function checkDirection() {
             if(xDiff > 0) {
                 document.location.href = "../workoutFrames/workoutMain/workoutMain2.html";
             } else {
-                //TODO heart
+                document.location.href = "../profileFrames/profileMain/profileframe.html"
             }
         }
     } else if (Math.abs(yDiff) > swipeThreshold) {
         if(yDiff > 0) {
             document.location.href = "../caloriesFrames/caloriesConnect/caloriesConnect.html"
         } else {
-            //TODO profile
+            console.log("up");
+            document.location.href = "../profileFrames/profileMain/profileframe.html"
         }
     }
 };
